@@ -24,7 +24,7 @@ const SearchContainer = () => {
                     </View>
                 </View>
 
-                <View style={{ margin:2, alignItems:'center'}}>
+                <View style={{ flex:1,margin:2, alignItems:'center'}}>
                     <GenreList />
                 </View>
             </View>

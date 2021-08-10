@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+
+const {height, width} = Dimensions.get('window');
 
 const GenreCard = (props) => {
 
@@ -26,15 +28,14 @@ export default GenreCard;
 const styles = StyleSheet.create(
     {
         container: {
-            flex: 1,
-            height: 124,
-            width: 319,
+            // flex: 1,
+            height: 125,
+            width: width-50,
             backgroundColor: '#E7E8EB',
             justifyContent: 'space-between',
             flexDirection: 'row',
             borderRadius: 10,
             alignItems: 'center',
-            elevation: 10,
             marginVertical: 10
         },
         cardImage1: {
@@ -75,15 +76,15 @@ const styles = StyleSheet.create(
             justifyContent: 'center'
         },
         textContainer: {
-            flex: 0.5,
+            flex: 0.7,
             paddingVertical: 25,
            
         },
         imageContainer: {
-            flex: 0.5,
+            flex: 0.3,
             flexDirection: 'row',
-            justifyContent:'center',
-            paddingRight:30
+            justifyContent:'flex-start',
+            paddingRight:30,
         }
     }
 )

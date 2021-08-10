@@ -2,24 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import HomeHeader from '../../common/HomeHeader';
 import CustomLibraryTabBar from './CustomLibraryTabBar';
-import Pager from './Pager';
-import { MadeForYou, LikedSongs, RecentlyPlayed, Albums } from './screens/index';
 
 
-const screenRender = (id) => {
-    switch(id) {
-        case 0: return(
-            <MadeForYou />
-        ) ;
-        case 1: return(
-        <LikedSongs />);
-            
-        case 2: return(<RecentlyPlayed />);
- 
-        case 3: return(<Albums />);
-
-    }
-}
 
 const LibraryContainer = () => {
     return (
@@ -33,10 +17,6 @@ const LibraryContainer = () => {
                 </View>
                 <View style={{flex:1}}>
                     <CustomLibraryTabBar />
-                    <View style={{flex:1}}>
-                    {screenRender(2)}
-                    
-                    </View>
                     
                 </View>
             </View>
@@ -51,6 +31,7 @@ const styles = StyleSheet.create(
     {
         mainContainer: {
             flex: 1,
+            backgroundColor:'#FFFFFF'
             
         },
         headerView: {

@@ -1,39 +1,37 @@
 import React, {useState} from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, FlatList, Dimensions } from 'react-native';
-import { MadeForYou, LikedSongs, RecentlyPlayed, Albums } from './screens/index';
-
-const {width, height} = Dimensions.get('window');
+import { View, TouchableOpacity, Text, StyleSheet, FlatList } from 'react-native';
+import {Overview, PublicPlaylist, Followers, Following} from './screens/index';
 
 const Screeens = [
     {
         id:1,
-        tabName: 'Made For You',
+        tabName: 'Overview',
     },
     {
         id:2,
-        tabName: 'Recently Played',
+        tabName: 'Public Playlist',
     },
     {
         id:3,
-        tabName: 'Liked Songs',
+        tabName: 'Following',
     },
     {
         id:4,
-        tabName: 'Albums',
+        tabName: 'Followers',
     }
 ];
 
 const screenRender = (id) => {
     switch(id) {
-        case 0: return(<MadeForYou />) ;
-        case 1: return(<RecentlyPlayed />);
-        case 2: return(<LikedSongs />);
-        case 3: return(<Albums />);
+        case 0: return(<Overview />) ;
+        case 1: return(<PublicPlaylist />);
+        case 2: return(<Following />);
+        case 3: return(<Followers />);
     }
 }
 
 
-const CustomLibraryTabBar = (props) => {
+const ProfileTabBar = (props) => {
     const [activeTab, setActiveTab] = useState(0);
     const renderItem = (item) => {
         return(
@@ -48,7 +46,6 @@ const CustomLibraryTabBar = (props) => {
     }
 
 
-
     return(
         <View>
             <FlatList 
@@ -56,9 +53,8 @@ const CustomLibraryTabBar = (props) => {
                 data={Screeens}
                 renderItem={({item, index})=>renderItem(item,index)}
                 keyExtractor={item=>item.id}
-                showsHorizontalScrollIndicator={false}
-                />
-            <View style={{height: height-height/5.5}}>  
+                showsHorizontalScrollIndicator={false}/>
+            <View style={{height: 500}}>  
             {screenRender(activeTab-1)}
             </View>
         </View>
@@ -66,7 +62,7 @@ const CustomLibraryTabBar = (props) => {
 }
 
 
-export default CustomLibraryTabBar;
+export default ProfileTabBar;
 
 const styles = StyleSheet.create(
     {

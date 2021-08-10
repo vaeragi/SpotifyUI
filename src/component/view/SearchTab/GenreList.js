@@ -29,6 +29,7 @@ const DATA = [
 
 const GenreList = () => {
     return(
+        <View style={{flex:1}}>
             <FlatList 
                 data={DATA}
                 renderItem={(item)=> {
@@ -37,8 +38,11 @@ const GenreList = () => {
                     )
                 }}
                 keyExtractor={item=> item.id}
-                contentContainerStyle={{justifyContent:'center'}}
-                />
+                contentContainerStyle={{alignItems:'center'}}
+                style={{width:width,paddingBottom:50}}
+                showsVerticalScrollIndicator={false}/>
+        </View>
+            
     )
 }
 
