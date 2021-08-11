@@ -32,7 +32,7 @@ const screenRender = (id) => {
 
 
 const ProfileTabBar = (props) => {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(2);
     const renderItem = (item) => {
         return(
             <View>

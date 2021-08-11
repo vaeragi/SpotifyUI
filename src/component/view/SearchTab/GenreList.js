@@ -2,7 +2,7 @@ import React from 'react';
 import { View, FlatList, Dimensions } from 'react-native';
 import GenreCard from './GenreCard';
 
-const {height, width} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const DATA = [
     {
@@ -38,8 +38,8 @@ const GenreList = () => {
                     )
                 }}
                 keyExtractor={item=> item.id}
-                contentContainerStyle={{alignItems:'center'}}
-                style={{width:width,paddingBottom:50}}
+                contentContainerStyle={{alignItems:'center',paddingBottom:70}}
+                style={{width:width}}
                 showsVerticalScrollIndicator={false}/>
         </View>
             

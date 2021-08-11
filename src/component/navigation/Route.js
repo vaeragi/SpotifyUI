@@ -10,7 +10,7 @@ const Route = () => {
 
     return(
         <NavigationContainer>
-        <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{headerShown:false}}>
+        <Stack.Navigator initialRouteName='MusicPlayer' screenOptions={{headerShown:false}}>
             <Stack.Screen name='HomeScreen' component={Tabs}/>
             <Stack.Screen name='MusicPlayer' component={MusicPlayer} />
         </Stack.Navigator>

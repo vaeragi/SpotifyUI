@@ -34,7 +34,7 @@ const screenRender = (id) => {
 
 
 const CustomLibraryTabBar = (props) => {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(1);
     const renderItem = (item) => {
         return(
             <View>

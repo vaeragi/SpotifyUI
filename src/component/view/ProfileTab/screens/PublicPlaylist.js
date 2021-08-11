@@ -1,34 +1,25 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
+import PublicPlaylistCard from '../../../common/PublicPlaylistCard';
 
 const PublicPlaylist = () => {
     return (
-        <View style={{flex:1}}>
-            <View style={{ width: 351, height: 132, borderRadius: 10, backgroundColor: '#E7E8EB'}}>
-            <View stlye={{flexDirection:'row', flex:0.5, borderWidth:1}}>
-                <View style={{ width: 62, height: 62, borderWidth: 1, borderRadius:31 }}>
-
-                </View>
-                <View style={{ width: 62, height: 62, borderWidth: 1, borderRadius:31 }}>
-
-                </View>
-                <View style={{ width: 62, height: 62, borderWidth: 1, borderRadius:31 }}>
-
-                </View>
-                <View style={{ width: 62, height: 62, borderWidth: 1, borderRadius:31 }}>
-
-                </View>
-                <View style={{ width: 62, height: 62, borderWidth: 1, borderRadius:31 }}>
-
-                </View>
-            </View>
-            <View>
-
-            </View>
-            </View>
-        </View>
+        <ScrollView contentContainerStyle={styles.mainContainer}>
+                    <PublicPlaylistCard title='Dark' creationDate= 'Created in DEC 2020'/>
+                    <PublicPlaylistCard title='My Mix' creationDate= 'Created in SEPT 2019'/>
+                    <PublicPlaylistCard title='EMINEM FAV' creationDate= 'Created in JAN 2021'/>
+                    <PublicPlaylistCard title='EMINEM FAV' creationDate= 'Created in JAN 2021'/>
+                    
+        </ScrollView>
     )
 }
 
 export default PublicPlaylist;
 
+const styles = StyleSheet.create({
+    mainContainer: {
+        alignItems:'center', 
+        paddingTop:10, 
+        paddingBottom:70
+    }
+});

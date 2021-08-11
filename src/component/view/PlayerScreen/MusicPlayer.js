@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, Dimensions, Image } from 'react-native';
 import { MusicArt, HeartSymbol, SpotifyIcon } from '../../../assets/index'
 
-const { height, width } = Dimensions.get('window')
+const { width } = Dimensions.get('window')
 
 const MusicPlayer = () => {
     return (
