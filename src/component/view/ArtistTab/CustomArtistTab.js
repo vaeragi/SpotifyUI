@@ -38,7 +38,7 @@ const screenRender = (id) => {
 }
 
 
-const CustomLibraryTabBar = (props) => {
+const CustomArtistTab = (props) => {
     const [activeTab, setActiveTab] = useState(1);
     const renderItem = (item) => {
         return(
@@ -63,7 +63,7 @@ const CustomLibraryTabBar = (props) => {
                 keyExtractor={item=>item.id}
                 showsHorizontalScrollIndicator={false}
                 />
-            <View style={{height: height-height/5.5}}>  
+            <View style={{height:height-500}}>  
             {screenRender(activeTab-1)}
             </View>
         </View>
@@ -71,7 +71,7 @@ const CustomLibraryTabBar = (props) => {
 }
 
 
-export default CustomLibraryTabBar;
+export default CustomArtistTab;
 
 const styles = StyleSheet.create(
     {

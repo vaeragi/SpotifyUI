@@ -8,7 +8,7 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
     return(
-        <Tab.Navigator  initialRouteName='ProfileTab' screenOptions={{headerShown:false}} tabBar={(props) => <CustomTab {...props} />}>
+        <Tab.Navigator  initialRouteName='HomeTab' screenOptions={{headerShown:false}} tabBar={(props) => <CustomTab {...props} />}>
         <Tab.Screen name='HomeTab' component={HomeContainer}/>
         <Tab.Screen name='SearchTab' component={SearchContainer} /> 
         <Tab.Screen name='LibraryTab' component={LibraryContainer} />

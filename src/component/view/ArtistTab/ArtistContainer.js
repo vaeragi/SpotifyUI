@@ -6,7 +6,7 @@ const { width, height } = Dimensions.get('window')
 
 const ArtistContainer = () => {
     return (
-        <View >
+        <View>
             <ImageBackground source={BillieElishBackgroundImage} style={{ width: width, height: height-260 }}>
                 <View style={styles.headerContainer}>
                     <View style={{ flex: 0.08 }}>
@@ -44,7 +44,7 @@ const ArtistContainer = () => {
                     </TouchableOpacity>
                 </View>
             </ImageBackground>
-            <View fstyle={{flex:1, borderColor:'white', borderWidth: 2}}>
+            <View style={{ borderColor:'white', borderWidth: 2}}>
                 <CustomArtistTab />
                 </View>
         </View>

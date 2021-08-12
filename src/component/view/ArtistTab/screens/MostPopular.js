@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image, Dimensions } from 'react-native';
 import { PlayButton, HeartSymbol, TripleDotHorizontalLight, HeartUnfilledDark } from '../../../../assets/index'
 
+const { height, width } = Dimensions.get('window')
 
 const DATA = [
     {
@@ -70,37 +71,28 @@ const MostPopular = () => {
 
     const renderItem = ({ item }) => {
         return (
-            <View style={{ flexDirection: 'row', marginVertical: 10, alignItems: 'center', paddingLeft: 10 }}>
-                <View style={{flex:0.1}}>
+            <View style={{ flex: 1, flexDirection: 'row', marginVertical: 10, alignItems: 'center', paddingHorizontal: 10, paddingBottom: 5, borderBottomWidth: 1, borderBottomColor: 'gray' }}>
+                <View style={{ flex: 0.1 }}>
                     <Image source={item.imageUrl} style={{ width: 30, height: 30, borderRadius: 15 }} />
                 </View>
-                <View style={{flex:0.05}}>
+                <View style={{ flex: 0.05 }}>
                     <Image source={PlayButton} style={{ width: 12, height: 12 }} />
                 </View>
-                <View style={{flex:0.5}}>
+                <View style={{ flex: 0.56 }}>
                     <Text style={styles.songTitle}>{item.songName}</Text>
                 </View>
-                <View style={{flex:0.16}}>
+                <View style={{ flex: 0.16 }}>
                     <Text style={styles.playCount}>{item.numberOfPlays}</Text>
                 </View>
-                <View style={{flex:0.08}}>
+                <View style={{ flex: 0.08 }}>
                     <Image source={HeartUnfilledDark} style={{ width: 16, height: 16 }} />
                 </View>
-                <View style={{flex:0.05}}>
+                <View style={{ flex: 0.05 }}>
                     <Image source={TripleDotHorizontalLight} style={{ width: 16, height: 16 }} />
                 </View>
-
             </View>
         )
     }
-
-
-
-
-
-
-
-
 
     return (
         <View>
@@ -109,10 +101,11 @@ const MostPopular = () => {
             </View>
             <View>
                 <FlatList
+                    style={{ height: height / 2 }}
                     data={DATA}
                     renderItem={(item) => renderItem(item)}
                     keyExtractor={item => item.id}
-                    />
+                />
             </View>
 
         </View>
@@ -129,12 +122,12 @@ const styles = StyleSheet.create({
         color: '#1ED760',
         textDecorationLine: 'underline'
     },
-    songTitle : {
+    songTitle: {
         fontFamily: 'Poppins-Light',
         fontSize: 12,
-        textTransform:'capitalize'
+        textTransform: 'capitalize'
     },
-    playCount : {
+    playCount: {
         fontFamily: 'Poppins-Light',
         fontSize: 10
     }
