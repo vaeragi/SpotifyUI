@@ -39,7 +39,7 @@ const ArtistList = () => {
                 keyExtractor={item=>item.id}
                 horizontal={true} 
                 style={{height:150}}
-                contentContainerStyle={{alignItems:'center'}}
+                contentContainerStyle={{alignItems:'center', paddingRight: 10}}
                 showsHorizontalScrollIndicator={false}/>
         </View>
     )

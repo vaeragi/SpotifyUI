@@ -2,7 +2,7 @@ import React from 'react';
 import { View, FlatList, Dimensions } from 'react-native';
 import PLaylistCard from './PlaylistCard';
 
-const {height, width} = Dimensions.get('window')
+const {width} = Dimensions.get('window')
 
 const DATA = [
     {
@@ -45,7 +45,7 @@ const PlayList = () => {
                 horizontal={true} 
                 showsHorizontalScrollIndicator={false}
                 style={{height: 170, width: width}}
-                contentContainerStyle={{alignItems:'center'}}
+                contentContainerStyle={{alignItems:'center', paddingRight: 15}}
                 />
         </View>
     )

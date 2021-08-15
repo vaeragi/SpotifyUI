@@ -5,10 +5,10 @@ const ArtistCard = (props) => {
     const { artistName, imageUrl } = props.item;
     return (
         <View style={styles.container}>
-            <View style={{ width: 118, height: 118, borderRadius:59, elevation:10 }}>
-            <Image
-                source={{ uri: imageUrl }}
-                style={{ width: 118, height: 118, borderRadius: 59 }} />
+            <View style={styles.imageContainer}>
+                <Image
+                    source={{ uri: imageUrl }}
+                    style={styles.imageStyle} />
             </View>
             <Text style={styles.textStyle}>{artistName.toUpperCase()}</Text>
         </View>
@@ -27,9 +27,20 @@ const styles = StyleSheet.create(
             marginHorizontal: 5,
         },
         textStyle: {
-            fontFamily:'Poppins-Light',
-            fontSize:12
+            fontFamily: 'Poppins-Light',
+            fontSize: 12
+        },
+        imageContainer: {
+            width: 118,
+            height: 118,
+            borderRadius: 59,
+            elevation: 10,
+            marginBottom: 10
+        },
+        imageStyle: {
+            width: 118,
+            height: 118,
+            borderRadius: 59
         }
-    
     }
 )

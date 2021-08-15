@@ -23,10 +23,10 @@ const Screeens = [
 
 const screenRender = (id) => {
     switch(id) {
-        case 0: return(<Overview />) ;
-        case 1: return(<PublicPlaylist />);
-        case 2: return(<Following />);
-        case 3: return(<Followers />);
+        case 1: return(<Overview />) ;
+        case 2: return(<PublicPlaylist />);
+        case 3: return(<Following />);
+        case 4: return(<Followers />);
     }
 }
 
@@ -39,7 +39,7 @@ const ProfileTabBar = (props) => {
                 <TouchableOpacity 
                     style={[styles.button]}
                     onPress={()=>setActiveTab(item.id)}>
-                    <Text style={[styles.button,{fontWeight:activeTab==item.id?'bold':'normal',borderBottomWidth:activeTab==item.id?2:0}]}>{item.tabName}</Text>
+                    <Text style={[styles.button,{fontFamily: activeTab==item.id?'Poppins-SemiBold':'Poppins-Regular',borderBottomWidth:activeTab==item.id?2:0}]}>{item.tabName}</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -55,7 +55,7 @@ const ProfileTabBar = (props) => {
                 keyExtractor={item=>item.id}
                 showsHorizontalScrollIndicator={false}/>
             <View style={{height: 500}}>  
-            {screenRender(activeTab-1)}
+            {screenRender(activeTab)}
             </View>
         </View>
     )
@@ -72,7 +72,6 @@ const styles = StyleSheet.create(
             paddingHorizontal:10,
             justifyContent:'center',
             alignItems:'center',
-            
         }
     }
 )

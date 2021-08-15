@@ -9,9 +9,9 @@ const { height, width } = Dimensions.get('window');
 const Overview = () => {
     return (
         <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-            <View style={{ alignItems: 'center', flex: 0.25, paddingVertical: 10 }}>
-                <View style={{ height: height / 6.5, width: width - 60, flexDirection: 'row', backgroundColor: '#E7E8EB', borderRadius: 10, elevation: 9, justifyContent: 'center', alignItems: 'center' }}>
-                    <View>
+            <View style={{ alignItems: 'center', flex: 0.25, padding: 10 }}>
+                <View style={{ height: height / 6.5, width: width - 60, flexDirection: 'row', backgroundColor: '#E7E8EB', borderRadius: 10, elevation: 9, justifyContent: 'center', alignItems: 'center', padding: 10 }}>
+                    <View style={{paddingLeft: 15}}>
                         <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg' }} style={{ width: 88, height: 88, borderRadius: 44 }} />
                     </View>
                     <View>
@@ -31,11 +31,8 @@ const Overview = () => {
                             <Image source={HeartUnfilledDark} style={{ width: 15, height: 15 }} />
                         </View>
                     </View>
-
                 </View>
-
             </View>
-
             <View style={{ flex: 0.75, paddingVertical: 10 }}>
                 <View style={{ height: 30 }}>
                     <Text style={styles.heading}>RECENTLY PLAYED</Text>
@@ -50,7 +47,8 @@ const Overview = () => {
                     <ArtistList />
                 </View>
             </View>
-            <View style={{ height: 60 }}></View>
+            <View style={{ height: 80 }}>
+            </View>
 
         </ScrollView>
 

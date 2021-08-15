@@ -72,7 +72,7 @@ const Following = () => {
                 data= {DATA}
                 renderItem = {(item)=> <FollowingCard {...item} />}
                 keyExtractor = {item => item.id} 
-                contentContainerStyle={{paddingBottom:70}}/>
+                contentContainerStyle={{paddingBottom:80}}/>
         </View>
     )
 }

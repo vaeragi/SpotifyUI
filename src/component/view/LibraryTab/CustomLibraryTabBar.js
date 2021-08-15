@@ -25,10 +25,10 @@ const Screeens = [
 
 const screenRender = (id) => {
     switch(id) {
-        case 0: return(<MadeForYou />) ;
-        case 1: return(<RecentlyPlayed />);
-        case 2: return(<LikedSongs />);
-        case 3: return(<Albums />);
+        case 1: return(<MadeForYou />) ;
+        case 2: return(<RecentlyPlayed />);
+        case 3: return(<LikedSongs />);
+        case 4: return(<Albums />);
     }
 }
 
@@ -59,7 +59,7 @@ const CustomLibraryTabBar = (props) => {
                 showsHorizontalScrollIndicator={false}
                 />
             <View style={{height: height-height/5.5}}>  
-            {screenRender(activeTab-1)}
+            {screenRender(activeTab)}
             </View>
         </View>
     )
